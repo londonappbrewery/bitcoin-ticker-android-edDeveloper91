@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 Log.d(LOG_TAG, response.toString());
                 try {
-                    String ask = response.getString("ask");
+                    String ask = response.getString("last");
                     mPriceTextView.setText(ask);
                 } catch (JSONException e) {
                     e.printStackTrace();
